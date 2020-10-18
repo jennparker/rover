@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">flyer</string>
+    <string name="app_name">NASAING</string>
     <string name="none_found">None found</string>
     <string name="camera_details">Camera Details</string>
     <string name="id">id:</string>
@@ -11,4 +11,7 @@
     <string name="full_name">full name:</string>
     <string name="rover_image">rover image</string>
     <string name="no_result_message">No Result! BOO!</string>
+    <string name="picture_of_the_day">Picture of the day</string>
+    <string name="rover_pix">Rover pix</string>
+    <string name="cool_nasa_pic">cool NASA pic</string>
 </resources>

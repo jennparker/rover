@@ -30,6 +30,10 @@ class MainFragment : Fragment() {
         binding.searchButton.setOnClickListener {
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToResultFragment())
         }
+
+        binding.podButton.setOnClickListener{
+            findNavController().navigate(MainFragmentDirections.actionMainFragmentToPODFragment())
+        }
     }
 
     companion object {

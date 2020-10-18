@@ -8,21 +8,24 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.booisajerk.flyer.ui.main.MainFragment"
-        android:label="MainFragment">
+        android:label="NASA Stuff">
         <action
             android:id="@+id/action_mainFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/roverListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_PODFragment"
+            app:destination="@id/PODFragment" />
     </fragment>
     <fragment
-        android:id="@+id/resultFragment"
+        android:id="@+id/roverListFragment"
         android:name="com.booisajerk.flyer.ui.list.SpaceListFragment"
         android:label="Rover Image List">
         <action
             android:id="@+id/action_resultFragment_to_spaceDetailFragment"
-            app:destination="@id/spaceDetailFragment" />
+            app:destination="@id/roverDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/spaceDetailFragment"
+        android:id="@+id/roverDetailFragment"
         android:name="com.booisajerk.flyer.ui.detail.SpaceDetailFragment"
         android:label="Rover Image Detail">
         <argument
@@ -62,4 +65,8 @@
             android:defaultValue="none_found"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/PODFragment"
+        android:name="com.booisajerk.flyer.ui.pod.PODFragment"
+        android:label="Picture of the Day" />
 </navigation>
