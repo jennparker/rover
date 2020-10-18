@@ -16,7 +16,6 @@ class SpaceListViewHolder constructor(
     private val spaceListViewModel: SpaceListViewModel
 ) : RecyclerView.ViewHolder(binding.root) {
 
-
     fun setUp(photoData: Photo) {
         Log.d(TAG, "setUp called. For this photo: $photoData")
         binding.setVariable(BR.photoData, photoData)

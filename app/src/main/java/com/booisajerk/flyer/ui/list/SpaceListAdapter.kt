@@ -23,10 +23,6 @@ class SpaceListAdapter(private val spaceListViewModel: SpaceListViewModel) : Rec
     override fun onBindViewHolder(holder: SpaceListViewHolder, position: Int) {
         Log.d(TAG, "onBindViewHolder called")
         holder.setUp(spaceList[position])
-
-//        Glide.with(holder.itemView.context)
-//            .load(spaceList[position].img_src)
-//            .into(holder.itemView.image_thumbnail)
     }
 
     fun updateList(spaceList: List<Photo>) {

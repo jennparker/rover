@@ -4,236 +4,241 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:backgroundTint="#ebecf0">
+        android:layout_height="wrap_content">
 
-        <!--Camera-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/camera_info"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:paddingBottom="12dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/camera_card_holder"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/image_card"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_details_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/camera_details"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_id_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/id"
-                    app:layout_constraintStart_toStartOf="@id/camera_details_title"
-                    app:layout_constraintTop_toBottomOf="@id/camera_details_title" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_id_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toEndOf="@id/camera_id_label"
-                    app:layout_constraintTop_toBottomOf="@id/camera_details_title"
-                    tools:text="86" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_name_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/name"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/camera_id_label" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_name_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toEndOf="@id/camera_name_label"
-                    app:layout_constraintTop_toBottomOf="@id/camera_id_label"
-                    tools:text="test" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_full_name_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/full_name"
-                    app:layout_constraintStart_toStartOf="@id/camera_name_label"
-                    app:layout_constraintTop_toBottomOf="@id/camera_name_label" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/camera_full_name_value"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2"
-                    android:paddingEnd="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/camera_full_name_label"
-                    app:layout_constraintTop_toTopOf="@id/camera_full_name_label"
-                    tools:text="test long string for testing wrapping at end of " />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="24dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toTopOf="@id/rover_info"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/camera_info">
-
-            <ImageView
-                android:id="@+id/rover_full_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/star_border"
-                android:contentDescription="@string/rover_image"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="300dp"
+                android:layout_margin="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </com.google.android.material.card.MaterialCardView>
+                app:layout_constraintTop_toTopOf="parent">
 
-        <!--Rover-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/rover_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/rover_card_holder"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="12dp">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rover_details"
-                    android:textStyle="bold"
+                <ImageView
+                    android:id="@+id/rover_full_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/rover_image"
+                    android:src="@drawable/star_border"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_id_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/id"
-                    app:layout_constraintStart_toStartOf="@id/rover_title"
-                    app:layout_constraintTop_toBottomOf="@id/rover_title" />
+            <!--Camera-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/camera_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_card">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_id_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="8dp"
-                    app:layout_constraintStart_toEndOf="@id/rover_id_label"
-                    app:layout_constraintTop_toTopOf="@id/rover_id_label"
-                    tools:text="test" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/camera_card_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_name_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/name"
-                    app:layout_constraintStart_toStartOf="@id/rover_id_label"
-                    app:layout_constraintTop_toBottomOf="@id/rover_id_label" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_details_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/camera_details"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_name_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@id/rover_name_label"
-                    app:layout_constraintStart_toEndOf="@id/rover_name_label"
-                    tools:text="test" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_id_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        app:layout_constraintStart_toStartOf="@id/camera_details_title"
+                        app:layout_constraintTop_toBottomOf="@id/camera_details_title" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_launch_date_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/launch_date"
-                    app:layout_constraintStart_toStartOf="@id/rover_name_label"
-                    app:layout_constraintTop_toBottomOf="@id/rover_name_label" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_id_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/camera_id_label"
+                        app:layout_constraintTop_toBottomOf="@id/camera_details_title"
+                        tools:text="86" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_launch_date_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@id/rover_launch_date_label"
-                    app:layout_constraintStart_toEndOf="@id/rover_launch_date_label"
-                    tools:text="test" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_name_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/camera_id_label" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_landing_date_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/landing_date"
-                    app:layout_constraintStart_toStartOf="@id/rover_launch_date_label"
-                    app:layout_constraintTop_toBottomOf="@id/rover_launch_date_label" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/camera_name_label"
+                        app:layout_constraintTop_toBottomOf="@id/camera_id_label"
+                        tools:text="test" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_landing_date_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@id/rover_landing_date_label"
-                    app:layout_constraintStart_toEndOf="@id/rover_landing_date_label"
-                    tools:text="test" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_full_name_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/full_name"
+                        app:layout_constraintStart_toStartOf="@id/camera_name_label"
+                        app:layout_constraintTop_toBottomOf="@id/camera_name_label" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_status_label"
-                    style="@style/DescriptionLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/status"
-                    app:layout_constraintStart_toStartOf="@id/rover_landing_date_label"
-                    app:layout_constraintTop_toBottomOf="@id/rover_landing_date_label" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/camera_full_name_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingEnd="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/camera_full_name_label"
+                        app:layout_constraintTop_toTopOf="@id/camera_full_name_label"
+                        tools:text="test long string for testing wrapping at end of " />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/rover_status_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@id/rover_status_label"
-                    app:layout_constraintStart_toEndOf="@id/rover_status_label"
-                    tools:text="test" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-        </com.google.android.material.card.MaterialCardView>
+            <!--Rover-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rover_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/camera_info">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rover_card_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rover_details"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_id_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        app:layout_constraintStart_toStartOf="@id/rover_title"
+                        app:layout_constraintTop_toBottomOf="@id/rover_title" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_id_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="8dp"
+                        app:layout_constraintStart_toEndOf="@id/rover_id_label"
+                        app:layout_constraintTop_toTopOf="@id/rover_id_label"
+                        tools:text="test" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_name_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        app:layout_constraintStart_toStartOf="@id/rover_id_label"
+                        app:layout_constraintTop_toBottomOf="@id/rover_id_label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/rover_name_label"
+                        app:layout_constraintStart_toEndOf="@id/rover_name_label"
+                        tools:text="test" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_launch_date_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/launch_date"
+                        app:layout_constraintStart_toStartOf="@id/rover_name_label"
+                        app:layout_constraintTop_toBottomOf="@id/rover_name_label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_launch_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/rover_launch_date_label"
+                        app:layout_constraintStart_toEndOf="@id/rover_launch_date_label"
+                        tools:text="test" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_landing_date_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/landing_date"
+                        app:layout_constraintStart_toStartOf="@id/rover_launch_date_label"
+                        app:layout_constraintTop_toBottomOf="@id/rover_launch_date_label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_landing_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/rover_landing_date_label"
+                        app:layout_constraintStart_toEndOf="@id/rover_landing_date_label"
+                        tools:text="test" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_status_label"
+                        style="@style/DescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"
+                        app:layout_constraintStart_toStartOf="@id/rover_landing_date_label"
+                        app:layout_constraintTop_toBottomOf="@id/rover_landing_date_label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rover_status_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/rover_status_label"
+                        app:layout_constraintStart_toEndOf="@id/rover_status_label"
+                        tools:text="test" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
