@@ -13,51 +13,64 @@
             type="com.booisajerk.flyer.model.Photo" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/photo_item_holder"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/image_thumbnail"
-            android:src="@{photoData.img_src}"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/photo_item_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/rover_name_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:text="@{photoData.rover.name}"
-            app:layout_constraintBottom_toBottomOf="@id/image_thumbnail"
-            app:layout_constraintStart_toEndOf="@id/image_thumbnail"
-            app:layout_constraintTop_toTopOf="@id/image_thumbnail"
-            tools:text="Curiosity" />
+            <ImageView
+                android:id="@+id/image_thumbnail"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/rover_image"
+                android:src="@{photoData.img_src}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/image_date"
-            android:text="@{photoData.earth_date}"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/rover_name_label"
-            app:layout_constraintTop_toBottomOf="@id/rover_name_label"
-            tools:text="25 December 2019" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/camera_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="@{photoData.camera.name}"
+                app:layout_constraintBottom_toBottomOf="@id/image_thumbnail"
+                app:layout_constraintStart_toEndOf="@id/image_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/image_thumbnail"
+                tools:text="MAST" />
 
-        <TextView
-            android:id="@+id/camera_name_label"
-            android:text="@{photoData.camera.name}"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/rover_name_label"
-            app:layout_constraintTop_toBottomOf="@id/image_date"
-            tools:text="MAST" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rover_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@{photoData.rover.name}"
+                app:layout_constraintBottom_toTopOf="@id/camera_name_label"
+                app:layout_constraintStart_toStartOf="@id/camera_name_label"
+                tools:text="Curiosity" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/image_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{photoData.earth_date}"
+                app:layout_constraintStart_toStartOf="@id/camera_name_label"
+                app:layout_constraintTop_toBottomOf="@id/camera_name_label"
+                tools:text="25 December 2019" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

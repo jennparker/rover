@@ -9,4 +9,6 @@
     <string name="landing_date">landing date:</string>
     <string name="status">status:</string>
     <string name="full_name">full name:</string>
+    <string name="rover_image">rover image</string>
+    <string name="no_result_message">No Result! BOO!</string>
 </resources>

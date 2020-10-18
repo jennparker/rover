@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:padding="12dp">
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_details_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_id_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                     app:layout_constraintStart_toStartOf="@id/camera_details_title"
                     app:layout_constraintTop_toBottomOf="@id/camera_details_title" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_id_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     app:layout_constraintTop_toBottomOf="@id/camera_details_title"
                     tools:text="86" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_name_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/camera_id_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_name_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                     app:layout_constraintTop_toBottomOf="@id/camera_id_label"
                     tools:text="test" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_full_name_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -79,15 +79,15 @@
                     app:layout_constraintStart_toStartOf="@id/camera_name_label"
                     app:layout_constraintTop_toBottomOf="@id/camera_name_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/camera_full_name_value"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingEnd="8dp"
                     android:maxLines="2"
-                    app:layout_constraintTop_toTopOf="@id/camera_full_name_label"
-                    app:layout_constraintStart_toEndOf="@id/camera_full_name_label"
+                    android:paddingEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/camera_full_name_label"
+                    app:layout_constraintTop_toTopOf="@id/camera_full_name_label"
                     tools:text="test long string for testing wrapping at end of " />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -111,6 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/star_border"
+                android:contentDescription="@string/rover_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +136,7 @@
                 android:layout_height="match_parent"
                 android:padding="12dp">
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,7 +145,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_id_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -153,16 +154,16 @@
                     app:layout_constraintStart_toStartOf="@id/rover_title"
                     app:layout_constraintTop_toBottomOf="@id/rover_title" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_id_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingEnd="8dp"
-                    app:layout_constraintTop_toTopOf="@id/rover_id_label"
                     app:layout_constraintStart_toEndOf="@id/rover_id_label"
+                    app:layout_constraintTop_toTopOf="@id/rover_id_label"
                     tools:text="test" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_name_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -171,7 +172,7 @@
                     app:layout_constraintStart_toStartOf="@id/rover_id_label"
                     app:layout_constraintTop_toBottomOf="@id/rover_id_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_name_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,7 +180,7 @@
                     app:layout_constraintStart_toEndOf="@id/rover_name_label"
                     tools:text="test" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_launch_date_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -188,7 +189,7 @@
                     app:layout_constraintStart_toStartOf="@id/rover_name_label"
                     app:layout_constraintTop_toBottomOf="@id/rover_name_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_launch_date_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -196,7 +197,7 @@
                     app:layout_constraintStart_toEndOf="@id/rover_launch_date_label"
                     tools:text="test" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_landing_date_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -205,7 +206,7 @@
                     app:layout_constraintStart_toStartOf="@id/rover_launch_date_label"
                     app:layout_constraintTop_toBottomOf="@id/rover_launch_date_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_landing_date_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -213,7 +214,7 @@
                     app:layout_constraintStart_toEndOf="@id/rover_landing_date_label"
                     tools:text="test" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_status_label"
                     style="@style/DescriptionLabel"
                     android:layout_width="wrap_content"
@@ -222,7 +223,7 @@
                     app:layout_constraintStart_toStartOf="@id/rover_landing_date_label"
                     app:layout_constraintTop_toBottomOf="@id/rover_landing_date_label" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/rover_status_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
