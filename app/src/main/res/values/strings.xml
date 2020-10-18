@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">flyer</string>
+    <string name="none_found">None found</string>
+    <string name="camera_details">Camera Details</string>
+    <string name="id">id:</string>
+    <string name="name">name:</string>
+    <string name="rover_details">Rover Details</string>
+    <string name="launch_date">launch date:</string>
+    <string name="landing_date">landing date:</string>
+    <string name="status">status:</string>
+    <string name="full_name">full name:</string>
+</resources>

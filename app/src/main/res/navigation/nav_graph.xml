@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.booisajerk.flyer.ui.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.booisajerk.flyer.ui.list.SpaceListFragment"
+        android:label="Rover Image List">
+        <action
+            android:id="@+id/action_resultFragment_to_spaceDetailFragment"
+            app:destination="@id/spaceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spaceDetailFragment"
+        android:name="com.booisajerk.flyer.ui.detail.SpaceDetailFragment"
+        android:label="Rover Image Detail">
+        <argument
+            android:name="rover_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="rover_name"
+            android:defaultValue="none_found"
+            app:argType="string" />
+        <argument
+            android:name="rover_landing_date"
+            android:defaultValue="none"
+            app:argType="string" />
+        <argument
+            android:name="rover_launch_date"
+            android:defaultValue="none"
+            app:argType="string" />
+        <argument
+            android:name="rover_status"
+            android:defaultValue="none_found"
+            app:argType="string" />
+        <argument
+            android:name="full_image"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="camera_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="camera_name"
+            android:defaultValue="none_found"
+            app:argType="string" />
+        <argument
+            android:name="camera_full_name"
+            android:defaultValue="none_found"
+            app:argType="string" />
+    </fragment>
+</navigation>
